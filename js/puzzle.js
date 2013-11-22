@@ -64,12 +64,14 @@
 			$(".butterfly").css("display","block");
 			$(".babyRegalo").css("display","none");
 			$("#dream-puzzles h2").html("Butterfly")
+			$(".movement").html(" ");
 		} else if ( table == "3"){
 			$(".final_result").removeClass("show");
 			$("#puzzleResult").html("Completed Puzzle");
 			$(".babyRegalo").css("display","block");
 			$(".butterfly").css("display","none");
 			$("#dream-puzzles h2").html("Baby Regalo")
+			$(".movement").html(" ");
 		}
 	
 	}
@@ -89,11 +91,11 @@
 	
 				if (start_pos < index) {
 					$('.sortable li:nth-child(' + index + ')').addClass('highlights');
-					$(" .puzzle_result").html("moving forward, at position "+ index  );
+					$(" .movement").html("Moving forward, at position "+ index  );
 					ui.item.css('border', '2px solid red');
 				} else {
 					$('.sortable li:eq(' + (index + 1) + ')').addClass('highlights');
-					$(" .puzzle_result").html("moving backward at position "+ (index +1));
+					$(" .movement").html("Moving backward at position "+ (index +1));
 					ui.item.css('border', '2px solid red');
 				}
 			},
@@ -112,6 +114,7 @@
 	$("#reset").click(function(){
 		$("#sort-butterfly").append(sortableElementsOne);
 		$("#sort-babyRegalo").append(sortableElementsTwo);
+		$(".movement").html(" ");
 	});
 	
 

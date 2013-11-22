@@ -112,6 +112,10 @@ Sortable Puzzle
 	opacity: 0.5;
 }
 
+.puzzle_result {
+	font-size:18px;
+}
+
 .sortable { 
 	list-style-type: none; 
 	margin: 0; 
