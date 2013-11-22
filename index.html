@@ -76,6 +76,7 @@
 		<div id ="dream-puzzles" class="hideDiv">
 			
 			<div class="row">
+				
 				<!-- Side bar: Select puzzle 
 				============================================================== -->
 				<div class="col-md-2 col-sm-6 col-xs-12">
@@ -98,6 +99,7 @@
 			<!-- All Puzzles
 			================================================================================= -->
 			<div class="row">
+				
 				<!-- 1. Butterfly Puzzle: Center Piece
 				============================================================== -->
 				<div class="butterfly">
@@ -118,13 +120,16 @@
 						</ul>
 					</div> <!-- / .butterfly-parts -->
 				
+					<!-- Completed puzzle Image
+					====================================== -->
 					<div class="col-md-offset-1 col-md-3 col-sm-11 final_result">
 						<button type="button" class="close" aria-hidden="true">&times;</button>
 						<hr/>
 						<img src='images/butterfly/Butterfly_open.png' alt='butterfly'>
 					</div><!-- / .final_result -->
 				
-					<!-- Puzzle's Result-->
+					<!-- Display Puzzle's Result
+					====================================== -->
 					<div class="col-md-offset-3 col-md-4"><br/><br/>
 						<p> Movement: <span class="movement"></span> </p>
 						<p class="puzzle_result">Solve the Butterfly Puzzle.</p>
@@ -151,21 +156,23 @@
 							<li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_01.png' alt='babyRegalo'></li>
 						</ul> 
 					</div> <!-- / .babyRegalo-parts -->
-				
+					
+					<!-- Completed puzzle Image
+					====================================== -->
 					<div class="col-md-offset-1 col-md-2 final_result">
 						<button type="button" class="close" aria-hidden="true">&times;</button>
 						<hr/>
 						<img src='images/babyRegalo/babyRegalo-complete.png' alt='butterfly'>
 					</div><!-- / .final_result -->
 				
-					<!-- Puzzle's Result-->
+					<!-- Display Puzzle's Result
+					====================================== -->
 					<div class="col-md-offset-3 col-md-4"><br/><br/>
 						<p> Movement: <span class="movement"></span> </p>
 						<p class="puzzle_result">Solve the babyRegala Puzzle.</p>
 					</div>
 				</div><!-- / .babyRegalo -->
 			</div> <!-- / .row 2-->
-
 		</div><!-- / #dream-puzzles -->
 		
 		
@@ -173,16 +180,19 @@
 		Learn Table Page Display
 		=========================================================================================================== -->
 		<div id="learnTables" class="hideDiv">
-			
 			<h1> Learn Your Multiplication Tables</h1>
+			
 			<button id="resetTable" class="btn btn-warning" >Reset Table</button> 
 			<button id="print-btn" class="btn btn-warning" >Print</button><br/><br/>
-			Type a number for it's  Multiplication table: <input type="text" id="column" value=" " title="Enter a numeric value"><br/><br/>
-		    <div id="table_error"></div>
+			
+			<span>Type a number for it's  Multiplication table:</span>
+			<input type="text" id="column" value=" " title="Enter a numeric value"><br/><br/>
+			
+			<div id="table_error"></div>
+			
 			<table id="multiplicationTable" class="table table-hover">
 			</table>
 			<br/>
-			
 		</div> <!-- / #learnTables-->
 		
 		
@@ -191,8 +201,8 @@
 		=========================================================================================================== -->
 		<div id="makeCard" class="hideDiv">
 			<div class="row">
-				
 				<div class="col-sm-5 col-md-6">
+					
 					<!-- Sticker picker 
 					============================================================== -->
 					<h2>Drag a sticker to add</h2>
@@ -203,8 +213,7 @@
 					<img class='stickers' src='images/card/Balloon_yellow.png' alt='yellow Balloon'>
 					<img class='stickers' src='images/card/Balloon_Red.png' alt='Red Balloon'>
 					<br>
-					
-											
+										
 					<!-- Message 
 					============================================================== -->
 					<h2>Pick a message</h2>
@@ -244,6 +253,7 @@
 				<br/>
 			
 				<div class="col-sm-5 col-sm-offset-0 col-md-6 col-md-offset-0">
+					
 					<!-- Color picker
 					============================================================== -->
 					<h2>Pick a color</h2>
@@ -257,7 +267,7 @@
 										
 					<!-- Texture picture 
 					============================================================== -->
-						<h2>Pick a texture</h2>
+					<h2>Pick a texture</h2>
 					<div class='textures' id='paper'></div>
 					<div class='textures' id='tiger'></div>
 					<div class='textures' id='cloth-two'></div>
@@ -270,19 +280,22 @@
 					<div id='preview' >
 						<div id='card-background'>
 							<div id='canvas'>
-								
 								<div id='message-output'></div>
 								<div id='recipient-output'></div>
 								<div id="droppable"><br/><br/><span class="glyphicon glyphicon-trash" title="Drag image here to delete."></span></div>
 							</div> <!-- #canvas-->
 						</div> <!-- / #card-background -->
 						
-						<!-- Buttons -->
+						<!-- Buttons
+						======================== -->
 						<button class="btn btn-warning" id='refresh-btn'>Start over</button>
 						<button class="btn btn-warning"  id='print-btn-card' >Print</button><br/><br/>
+						
+						<!-- Print Error
+						======================== -->
 						<div id="print_error" class="error"></div>
 					</div><!-- / #preview-->
-				</div>
+				</div> 
 			
 			</div><!-- / .row-->
 		</div><!-- / #makeCard -->
@@ -299,31 +312,31 @@
 	</div> <!-- /container -->
 	
 	
-<!-- ======================================================================================================
-Dreamalings Model
-=========================================================================================================== -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Dreamalings Family</h4>
-			</div>
-			<div class="modal-body">
-				<img class="img-responsive" src="images/dreamalings/dreamalings-family.png" alt="Dreamalings-family" />
-			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+	<!-- ======================================================================================================
+	Dreamalings Model
+	=========================================================================================================== -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Dreamalings Family</h4>
+				</div>
+				<div class="modal-body">
+					<img class="img-responsive" src="images/dreamalings/dreamalings-family.png" alt="Dreamalings-family" />
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script type="text/jscript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/puzzle.js"></script>
-<script src="js/card-o-matic.js"></script>
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/jscript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/puzzle.js"></script>
+	<script src="js/card-o-matic.js"></script>
 </body>
 </html>
