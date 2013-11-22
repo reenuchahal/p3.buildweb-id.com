@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	
+	<title>Dreamalings Puzzles</title>
+	
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	
+	<!-- Custom styles for this template -->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/features.css" rel="stylesheet">
+	
+	<!-- Just for debugging purposes. Don't actually copy this line! -->
+	<!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="container">
+		
+		<!-- ======================================================================================================
+		Static navbar 
+		=========================================================================================================== -->
+		<div class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<span class="navbar-brand" data-toggle="modal" data-target="#myModal">Dreamalings Family</span>
+			</div> <!-- /.navbar-header -->
+			
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li id="home" class="menu active"><a href="#">Home</a></li>
+					<li id="puzzles-nav"  class="menu"><a href="#">puzzles</a></li>
+					<li id="learnTab" class="menu"><a href="#">Learn Tables</a></li>
+					<li id="makeACard" class="menu"><a href="#">Make a Card</a></li>
+				</ul>
+			</div> <!--/.nav-collapse -->
+		</div> <!-- /.navbar --> 
+		
+		
+		<!-- ======================================================================================================
+		Home Page Display
+		=========================================================================================================== -->
+		<div id="hero-unit" class="jumbotron">
+			<span><img id="logo" src="images/dreamalings/logo.png" alt="dreamalings-logo"/></span>
+			<h1>Dreamalings Fun Puzzles</h1>
+			<h2>Welcome teachers, parents, children and friends!</h2>
+			<p>The Dreamalings welcome you into our family!</p>
+			<p>We have designed some experimental, fun and brain stimulating puzzles so you can "live" our magiacal stories with the Dreamalings !</p>
+			<p>
+			  <a id="puzzles-display" class="menu btn btn-lg btn-warning" href="#">Puzzles &raquo;</a>
+			</p>
+		</div> <!-- / .jumbotron -->
+		
+		
+		<!-- ======================================================================================================
+		Puzzles Page Display
+		=========================================================================================================== -->
+		<div id ="dream-puzzles" class="hideDiv">
+			<div class="row">
+				
+				<!-- Side bar: Select puzzle 
+				============================================================== -->
+				<div class="col-md-2 col-sm-6 col-xs-12">
+		  			<h4>Select Puzzle here</h4>
+					<select id="tables" class="form-control">
+						<option value="2">Butterfly</option>
+						<option value="3">Baby Regalo</option>
+					</select><br/>
+				</div>
+				
+				<!-- Puzzle Header, show final result button and reset Button
+				============================================================== -->
+				<div class="col-md-offset-1 col-md-3 col-sm-6 col-xs-12">
+					<h2>Butterfly</h2>
+					<button id="puzzleResult" type="button" class="btn btn-warning">Completed Puzzle</button>
+					<button id="reset" type="button" class="btn btn-warning">Reset</button><br/><br/>
+				</div>
+			</div><!-- / .row  1-->
+	
+			<!-- All Puzzles
+			================================================================================= -->
+		  	<div class="row">
+		  		
+				<!-- 1. Butterfly Puzzle: Center Piece
+				============================================================== -->
+				<div class="butterfly">
+			  		<div class="col-md-offset-3 col-md-3 butterfly-parts">
+						<ul id="sort-butterfly" class="sortable">
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_08.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_09.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_01.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_03.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_05.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_04.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_11.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_10.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_07.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_02.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_06.png' alt='butterfly'></li>
+						  <li class="ui-state-default"><img src='images/butterfly/Butterfly_open-(1)_12.png' alt='butterfly'></li>
+						</ul>
+					</div> <!-- / .butterfly-parts -->
+					
+					<div class="col-md-offset-1 col-md-3 col-sm-11 final_result">
+						<button type="button" class="close" aria-hidden="true">&times;</button>
+						<hr/>
+						<img src='images/butterfly/Butterfly_open.png' alt='butterfly'>
+					</div><!-- / .final_result -->
+					
+					<!-- Puzzle's Result-->
+					<div class="col-md-offset-3 col-md-4"><br/><br/>
+					<p class="puzzle_result">Solve the Butterfly Puzzle.</p>
+					</div>
+					
+				</div><!-- / .butterfly -->
+				
+				<!--2. Baby Regalo : Center Piece 
+				============================================================== -->
+				<div class="babyRegalo">
+			  		<div class="col-md-offset-3 col-md-3 babyRegalo-parts">
+						<ul id="sort-babyRegalo" class="sortable">
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_05.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_03.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_10.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_09.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_06.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_11.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_07.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_12.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_08.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_02.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_04.png' alt='babyRegalo'></li>
+						  <li class="ui-state-default"><img src='images/babyRegalo/babyRegalo_01.png' alt='babyRegalo'></li>
+						</ul> 
+					</div> <!-- / .babyRegalo-parts -->
+					
+					<div class="col-md-offset-1 col-md-2 final_result">
+						<button type="button" class="close" aria-hidden="true">&times;</button>
+						<hr/>
+						<img src='images/babyRegalo/babyRegalo-complete.png' alt='butterfly'>
+					</div><!-- / .final_result -->
+					
+					<!-- Puzzle's Result-->
+					<div class="col-md-offset-3 col-md-4"><br/><br/>
+					<p class="puzzle_result">Solve the babyRegala Puzzle.</p>
+					</div>
+					
+				</div><!-- / .babyRegalo -->
+			</div> <!-- / .row 2-->
+			
+		</div><!-- / #dream-puzzles -->
+		
+		<!-- ======================================================================================================
+		Learn Table Page Display
+		=========================================================================================================== -->
+		<div id="learnTables" class="hideDiv">
+			
+			<h1> Learn Your Multiplication Tables</h1>
+			<button id="resetTable" class="btn btn-warning" >Reset Table</button> <button id="print-btn" class="btn btn-warning" >Print</button><br/><br/>
+			Type a number for it's  Multiplication table: <input type="text" id="column" value=" " title="Enter a numeric value"><br/><br/>
+		    <div id="table_error"></div>
+			<table id="multiplicationTable" class="table table-hover">
+			</table>
+			<br/>
+			
+		</div> <!-- / #learnTables-->
+		
+		<!-- ======================================================================================================
+		Make a Card Page Display
+		=========================================================================================================== -->
+		<div id="makeCard" class="hideDiv">
+			<div class="row">
+				<div class="col-sm-5 col-md-6">
+					
+			  		<!-- Sticker picker 
+					============================================================== -->
+					<h2>Drag a sticker to add</h2>
+					<img id="stickOne" class='stickers' src='images/card/babyRegalo-sm.png' alt='babyRegalo'>
+					<img class='stickers' src='images/card/Butterfly_open-sm.png' alt='Butterfly'>
+					<img class='stickers' src='images/card/Dreamer-cantante.png' alt='Dreamer'>
+					<img class='stickers' src='images/card/Zazzy-Qb-(1).png' alt='Zazzy Q'>
+					<img class='stickers' src='images/card/Balloon_yellow.png' alt='yellow Balloon'>
+					<img class='stickers' src='images/card/Balloon_Red.png' alt='Red Balloon'>
+					<br>
+					
+											
+					<!-- Message 
+					============================================================== -->
+					<h2>Pick a message</h2>
+					<input type='radio' class='messages' name='message' id='happy-birthday'>
+					<label for='happy-birthday'>&nbsp;Happy Birthday</label><br>
+					
+					<input type='radio' class='messages' name='message' id='thank-you'>
+					<label for='thank-you'>&nbsp;Thank You</label><br>
+					
+					<input type='radio' class='messages' name='message' id='congratulations'>
+					<label for='congratulations'>&nbsp;Congratulations</label><br>
+					
+					<input type='radio' class='messages' name='message' id='miss-you'>
+					<label for='miss-you'>&nbsp;I miss you</label><br/>
+					
+					<input type='radio' class='messages' name='message' id='no-text'>
+					<label for='no-text'>No Message</label>
+							
+					<!-- Recipient 
+					============================================================== -->	
+					<h2>Dear...</h2>
+					<input type='text' id='recipient' maxlength="14"> 
+					<span class='error' id='recipient-error'></span>
+					
+					<!-- Choose a font 
+					============================================================== -->
+					<h2>Choose a font</h2>
+					<select id="fonts" class="form-control"> 
+					    <option value="Arial">Arial - Default</option>
+						<option value="'Comic Sans MS'">Comic Sans MS</option>
+						<option value="Georgia">Georgia</option>
+						<option value="Helvetica">Helvetica</option>
+						<option value="Tahoma">Tahoma</option>
+			            <option value="'Times New Roman'">Times New Roman</option>
+					</select>	
+				</div><br/>
+			
+				<div class="col-sm-5 col-sm-offset-0 col-md-6 col-md-offset-0">
+					<!-- Color picker
+					============================================================== -->
+					<h2>Pick a color</h2>
+					<div class="colors" id="red"></div>
+					<div class="colors" id="blue"></div>
+					<div class="colors" id="green"></div>
+					<div class="colors" id="yellow"></div>
+					<div class="colors" id="indigo"></div>
+					<div class="colors" id="white"></div>
+					<div class='clearfix'></div>
+										
+					<!-- Texture picture 
+					============================================================== -->
+						<h2>Pick a texture</h2>
+					<div class='textures' id='paper'></div>
+					<div class='textures' id='tiger'></div>
+					<div class='textures' id='cloth-two'></div>
+					<div class='textures' id='cloth'></div>
+					<div class='textures' id='no-texture'></div>
+					<div class='clearfix'></div>
+					
+					<!-- Preview
+					============================================================== -->	
+					<div id='preview' >
+						<div id='card-background'>
+							<div id='canvas'>
+								
+								<div id='message-output'></div>
+								<div id='recipient-output'></div>
+								<div id="droppable"><br/><br/><span class="glyphicon glyphicon-trash" title="Drag image here to delete."></span></div>
+							</div> <!-- #canvas-->
+						</div> <!-- / #card-background -->
+						
+						<!-- Buttons -->
+						<button class="btn btn-warning" id='refresh-btn'>Start over</button>
+						<button class="btn btn-warning"  id='print-btn-card' >Print</button><br/><br/>
+						<div id="print_error" class="error"></div>
+					</div><!-- / #preview-->
+				</div>
+			
+			</div><!-- / .row-->
+		</div><!-- / #makeCard -->
+		
+		<!-- ======================================================================================================
+		footer Starts
+		=========================================================================================================== -->
+		<div class="row">
+			<div class="col-md-12 footer">
+			</div>
+		</div>
+		
+	</div> <!-- /container -->
+	
+<!-- ======================================================================================================
+Dreamalings Model
+=========================================================================================================== -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Dreamalings Family</h4>
+			</div>
+			<div class="modal-body">
+				<img class="img-responsive" src="images/dreamalings/dreamalings-family.png" alt="Dreamalings-family" />
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/jscript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/puzzle.js"></script>
+<script src="js/card-o-matic.js"></script>
+</body>
+</html>

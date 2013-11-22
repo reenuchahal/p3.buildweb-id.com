@@ -1,0 +1,129 @@
+/*-------------------------------------------------------------------------------------------------
+Colors
+-------------------------------------------------------------------------------------------------*/
+#blue {
+	background-color: #6685C2;
+}
+
+#green {
+	background-color: 	#80CC80;
+}
+
+#indigo {
+	background-color: #99E6E6;
+}
+
+#red {
+	background-color:#FF9999;
+}
+
+#white {
+	background-color: #ffffff;
+}
+
+#yellow {
+	background-color: #FFF5E0;
+}
+
+.colors {
+	cursor:pointer;
+	width:30px;
+	height:30px;
+	float:left;
+	margin-right:5px;
+	box-shadow: 5px 5px 5px #bbb;
+}
+
+
+/*-------------------------------------------------------------------------------------------------
+Textures
+-------------------------------------------------------------------------------------------------*/
+#cloth {
+	background-image:url('../images/texture/texture-cloth.png');
+}
+
+#cloth-two {
+	background-image:url('../images/texture/texture-cloth-2.png');
+}
+
+#no-texture {
+	background-image:url(' ');
+}
+
+#paper {
+	background-image:url('../images/texture/texture-paper.png');
+}
+
+#tiger {
+	background-image:url('../images/texture/tiger.png');
+}
+
+.textures {
+	cursor:pointer;
+	width:80px;
+	height:35px;
+	border:1px solid #eee;
+	float:left;
+	margin-right:5px;
+	margin-bottom:10px;
+	box-shadow: 5px 5px 5px #bbb;
+}
+
+
+/*-------------------------------------------------------------------------------------------------
+Message Output
+-------------------------------------------------------------------------------------------------*/
+#message-output {
+	text-align:center;
+	font-size:35px;
+	position:absolute;
+	top:100px;
+	height:50px;
+	width:100%;
+	cursor:move;
+}
+
+
+/*-------------------------------------------------------------------------------------------------
+Recipient Output
+-------------------------------------------------------------------------------------------------*/
+#recipient-output {	
+	
+	font-size:30px;
+	position:absolute;
+	top:150px;
+	left:120px;
+	cursor: move !important;
+}
+
+.error {
+	color:red;
+}
+
+
+/*-------------------------------------------------------------------------------------------------
+Stickers
+-------------------------------------------------------------------------------------------------*/
+#droppable {
+	position:absolute;
+	top:370px;
+	width:100px;
+	height:100px;
+	
+}
+
+#droppable p {
+	font-size:11px;
+}
+
+.stickers {
+	cursor:move;
+	z-index:2; 
+}
+
+.stickers_on_card {
+	position:absolute;
+	top:0px;
+	left:0px;
+	cursor:move;
+}

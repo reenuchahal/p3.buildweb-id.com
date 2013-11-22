@@ -1,0 +1,156 @@
+/*-------------------------------------------------------------------------------------------------
+Elements
+-------------------------------------------------------------------------------------------------*/
+body {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background:#ffffff url('../images/dreamalings/body_bg.jpg') repeat;
+}
+
+hr {
+	margin-top:30px;
+}
+
+table {
+	width:300px !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------
+Common Styles for main container divs
+-------------------------------------------------------------------------------------------------*/
+#dream-puzzles, #learnTables, #makeCard {
+	background-color: #fff;
+	padding:30px;
+	min-height:300px;
+	margin-bottom:30px;
+	border:1px sold #fff;
+	border-radius:6px;
+}
+
+
+/*-------------------------------------------------------------------------------------------------
+General Classes : Alphabetical arrangement
+-------------------------------------------------------------------------------------------------*/
+.active {
+	background-color: #D4D4D4;
+}
+
+.error {
+	color:red;
+	font-size: 11px;
+}
+
+.footer {
+	min-height:250px;
+	background: url('../images/dreamalings/footer_bg.png') no-repeat;
+	background-position:center; 
+	background-size: 100%;
+	margin-bottom:-50px;
+}
+
+.header {
+	background-color: #FFBC21;
+	padding: 5px 100px 5px 20px;
+}
+	
+.hideDiv {
+	display: none !important;
+}
+
+.jumbotron {
+	background-color:#ffffff;
+}
+	
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-brand{
+	cursor:pointer;
+}
+
+.show {
+	display:block !important;
+}
+
+
+/*-------------------------------------------------------------------------------------------------
+Sortable Puzzle
+-------------------------------------------------------------------------------------------------*/
+.babyRegalo, .final_result{
+	display: none;
+	margin-bottom:50px;
+}
+
+.butterfly-parts, .babyRegalo-parts{
+ 	background-color:#f6f6f6;
+	width:401px;
+	padding:  0;
+	border: 1px solid #eee;
+	border-radius:6px;
+ }
+ 
+.butterfly-parts {
+ 	height: 270px;
+ }
+ 
+.babyRegalo-parts {
+ 	height:406px;
+ }
+
+
+.final_result {
+	margin-top:20px;
+	border:1px solid #eee;
+	padding:5px;
+	width:210px;
+}
+
+.highlights{
+	background-color:#000;
+	opacity: 0.5;
+}
+
+.sortable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	width: 450px;
+}
+ 
+ .sortable li { 
+ 	margin: 0; 
+	padding: 0; 
+	float: left; 
+	width: 100px; 
+	text-align: center; 
+	cursor:move;
+	}
+	
+
+/*-------------------------------------------------------------------------------------------------
+Table Styles
+-------------------------------------------------------------------------------------------------*/
+#multiplicationTable {
+	background-color: #fff;
+	padding:20px;
+}
+
+#table_error, #table_error ul, #table_error ul li {
+	color: red;
+	font: 11px;
+}
+
+
+/*-------------------------------------------------------------------------------------------------
+Overwrite Bootstrap here
+-------------------------------------------------------------------------------------------------*/
+body.modal-open {
+	margin-right:0 !important;
+	
+}
+
+.modal-body {
+	background-color:#6CB6D0;
+}
