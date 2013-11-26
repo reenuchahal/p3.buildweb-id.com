@@ -1,6 +1,6 @@
 // Tool tip for delete icon
 	$(function() {
-		$(".glyphicon-trash, #recipient-output, #message-output ").tooltip();
+		$(".glyphicon-trash, #recipient-output, #message-output, #save-btn-card").tooltip();
 	});
 	
 	
@@ -231,4 +231,78 @@
 			new_tab.document.close();
 		}
 	});
+	
+	
+// Save Different Versions
+
+	// Function to clear saved cards
+	$('#clear-copy').click(function() {
+		
+		// set count to zero
+		count = 0;
+		
+		// delete right margin
+		$(".saveCopy").css("margin", "0 0 0 0");
+		
+		// delete .saveCopy div
+		$(".saveCopy").html(" ");
+		
+		// delete an save_error
+		$("#save_error").html(" ");
+		
+		// hide the clear copy button
+		$(this).removeClass("show").addClass("hidden");
+	});
+	
+	
+	// Function to save cards at the bottom
+	var count = 0;
+	$( "body" ).on( "click", "#save-btn-card", function() {
+		
+		// show the button
+		$("#clear-copy").removeClass("hidden").addClass("show");
+		
+		// Take the existing card on the page (in the #canvas div) and clone it for the new tab
+		var canvas_clone = $('#canvas').clone();
+			
+		// Give us the whole canvas, i.e the complete card from our clone
+		var canvas = canvas_clone.prop('outerHTML');
+		
+		// For the new tab, we need to basically construct all the pieces we need for any HTML page starting with a start <html> tag.
+		var new_tab_contents = '<html>';
+		
+		// Adding onto our new_tab_contents variable one line at a time)
+		new_tab_contents += '<head>';
+		new_tab_contents += '<link rel="stylesheet" href="css/main.css" type="text/css">'; // Add CSS
+		new_tab_contents += '<link rel="stylesheet" href="css/features.css" type="text/css">'; // Add CSS
+		new_tab_contents += '</head>';
+		new_tab_contents += '<body>';
+		new_tab_contents += canvas; // Here's where we add the card to our HTML for the new tab
+		new_tab_contents += '</body></html>';
+			
+		
+		var newColumn=" ";
+		
+		// add a new div / column if saved copies are less than 3
+		if (++count <= 3) {
+		
+			// this will create one column every time save button is clicked
+			newColumn += "<div class='saveCopy pull-left'>" + new_tab_contents + "</div>";
+		
+			// at the end of each cycle, add a div.saveCopy inside div#saved-canvas
+			$("#saved-canvas").append(newColumn);
+		
+		} else {
+			
+			// If saved copies are more than 3 show this error
+			$("#save_error").html("Max Saved Designs: 3")
+		}
+		
+	});
+	
+	
+
+	
+	
+	
 

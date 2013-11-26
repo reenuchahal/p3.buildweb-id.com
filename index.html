@@ -289,16 +289,32 @@
 						<!-- Buttons
 						======================== -->
 						<button class="btn btn-warning" id='refresh-btn'>Start over</button>
-						<button class="btn btn-warning"  id='print-btn-card' >Print</button><br/><br/>
+						<button class="btn btn-warning"  id='print-btn-card' >Print</button>
+						<button class="btn btn-warning"  id='save-btn-card' title='Save different versions of card ' data-placement='bottom' >Save a copy</button><br/><br/>
 						
 						<!-- Print Error
 						======================== -->
+						<span id="save_error" class="error"></span>
 						<div id="print_error" class="error"></div>
 					</div><!-- / #preview-->
 				</div> 
 			
 			</div><!-- / .row-->
+			
+			<div class="row">
+				
+				<!-- Save 3 Different Versions of Card 
+				================================================================== -->
+				<div class="col-sm-12 col-md-12">
+					<hr>
+					<button class="btn btn-warning hidden" id='clear-copy'>Clear Saved Copies</button>
+					<div id="saved-canvas"></div>
+				</div>
+			</div><!-- /.row-->
 		</div><!-- / #makeCard -->
+		
+		<!-- 
+		===============================-->
 		
 		
 		<!-- ======================================================================================================
