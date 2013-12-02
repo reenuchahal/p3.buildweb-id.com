@@ -231,15 +231,9 @@
 			
 			}
 		} 
-	}	
-	
+	}
 	
 // Menu Learn Tables: Page 3 Content
-	
-	// Tool tip for table Input
-	$(function() {
-		$("#column").tooltip();
-	});
 	
 	//  call function calulate on keyup
 	$('input').keyup(calculate);

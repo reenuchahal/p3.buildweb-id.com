@@ -63,7 +63,7 @@
 			<h1>Dreamalings Fun Puzzles</h1>
 			<h2>Welcome teachers, parents, children and friends!</h2>
 			<p>The Dreamalings welcome you into our family!</p>
-			<p>We have designed some experimental, fun and brain stimulating puzzles so you can "live" our magiacal stories with the Dreamalings !</p>
+			<p>We have designed some experimental, fun and brain stimulating puzzles so you can "live" our magical stories with the Dreamalings !</p>
 			<p>
 			  <a id="puzzles-display" class="menu btn btn-lg btn-warning" href="#">Puzzles &raquo;</a>
 			</p>
@@ -85,6 +85,7 @@
 						<option value="2">Butterfly</option>
 						<option value="3">Baby Regalo</option>
 					</select><br/>
+					<button class="btn btn-primary" data-toggle="modal" data-target="#myModalPuzzle">Puzzle Instructions</button>
 				</div>
 				
 				<!-- Puzzle Header, show final result button and reset Button
@@ -186,7 +187,7 @@
 			<button id="print-btn" class="btn btn-warning" >Print</button><br/><br/>
 			
 			<span>Type a number for it's  Multiplication table:</span>
-			<input type="text" id="column" value=" " title="Enter a numeric value"><br/><br/>
+			<input type="text" class="myToolTip" id="column" value=" " title="Enter a numeric value"><br/><br/>
 			
 			<div id="table_error"></div>
 			
@@ -205,7 +206,7 @@
 					
 					<!-- Sticker picker 
 					============================================================== -->
-					<h2>Drag a sticker to add</h2>
+					<h2 class="myToolTip" title="Drag a sticker to add on canvas. You can further drag the sticker anywhere on the canvas. To drop the sticker drag it to the bin at the bottom of the canvas.">Drag a sticker to add on canvas</h2>
 					<img id="stickOne" class='stickers' src='images/card/babyRegalo-sm.png' alt='babyRegalo'>
 					<img class='stickers' src='images/card/Butterfly_open-sm.png' alt='Butterfly'>
 					<img class='stickers' src='images/card/Dreamer-cantante.png' alt='Dreamer'>
@@ -216,7 +217,7 @@
 										
 					<!-- Message 
 					============================================================== -->
-					<h2>Pick a message</h2>
+					<h2 class="myToolTip" title="You can drag a message up and down on the canvas">Pick a message for card</h2>
 					<input type='radio' class='messages' name='message' id='happy-birthday'>
 					<label for='happy-birthday'>&nbsp;Happy Birthday</label><br>
 					
@@ -234,7 +235,7 @@
 							
 					<!-- Recipient 
 					============================================================== -->	
-					<h2>Dear...</h2>
+					<h2 class="myToolTip" title="You can drag a name anywhere on the canvas.">Write name of the recipient</h2>
 					<input type='text' id='recipient' maxlength="14"> 
 					<span class='error' id='recipient-error'></span>
 					
@@ -282,7 +283,7 @@
 							<div id='canvas'>
 								<div id='message-output'></div>
 								<div id='recipient-output'></div>
-								<div id="droppable"><br/><br/><span class="glyphicon glyphicon-trash" title="Drag image here to delete."></span></div>
+								<div id="droppable"><br/><br/><span class="glyphicon glyphicon-trash myToolTip" title="Drag image here to delete."></span></div>
 							</div> <!-- #canvas-->
 						</div> <!-- / #card-background -->
 						
@@ -290,7 +291,7 @@
 						======================== -->
 						<button class="btn btn-warning" id='refresh-btn'>Start over</button>
 						<button class="btn btn-warning"  id='print-btn-card' >Print</button>
-						<button class="btn btn-warning"  id='save-btn-card' title='Save different versions of card ' data-placement='bottom' >Save a copy</button><br/><br/>
+						<button class="btn btn-warning myToolTip"  id='save-btn-card' title='Save different versions of card ' data-placement='bottom' >Save a copy</button><br/><br/>
 						
 						<!-- Print Error
 						======================== -->
@@ -338,8 +339,32 @@
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h4 class="modal-title">Dreamalings Family</h4>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body dreamFamily">
 					<img class="img-responsive" src="images/dreamalings/dreamalings-family.png" alt="Dreamalings-family" />
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	
+	<!-- ======================================================================================================
+	Puzzle Instructions Model
+	=========================================================================================================== -->
+	<div class="modal fade" id="myModalPuzzle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Puzzles Instruction.</h4>
+				</div>
+				<div class="modal-body">
+					You can solve the puzzle by dragging the puzzle pieces in correct order. 
+					To see a finished version of the puzzle click on the completed puzzle button.
+					To set the puzzle to it's original order click on the reset button.
+					Choose another puzzle option using left hand side 'Select puzzle here.'
+				</div>
+				<div class="modal-footer">
+					
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->

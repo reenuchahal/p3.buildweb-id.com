@@ -1,6 +1,6 @@
 // Tool tip for delete icon
 	$(function() {
-		$(".glyphicon-trash, #recipient-output, #message-output, #save-btn-card").tooltip();
+		$(".myToolTip").tooltip();
 	});
 	
 	
