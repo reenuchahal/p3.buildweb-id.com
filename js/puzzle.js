@@ -181,58 +181,51 @@
 		'<img src="images/babyRegalo/babyRegalo_11.png" alt="babyRegalo">',
 		'<img src="images/babyRegalo/babyRegalo_12.png" alt="babyRegalo">'
 	);
-		
 	
-	// Match Users Sorted puzzle results to the final Result Array			
+	// Match Users Sorted puzzle results to the final Result Array
 	function showResult(){
 		
-		// Get Sorted puzzle pieces in Array form
-		var x = $(".sortable li").toArray();
+	    // Get Sorted puzzle in Array form
+	    var x = $("#sort-butterfly li").toArray();
+		var y = $( "#sort-babyRegalo li").toArray();
+	    
+	    // Innocent until proven guilty
+	    var butterflySolved = true;
+	    var babyRegaloSolved = true;
 		
-		// Create a loop to Compare it with final Result
-		for (i=0; i<x.length; i++){
-			if ((x[0].innerHTML) == butterfly[0] && 
-				(x[1].innerHTML) == butterfly[1] && 
-				(x[2].innerHTML) == butterfly[2] &&
-				(x[3].innerHTML) == butterfly[3] && 
-				(x[4].innerHTML) == butterfly[4] && 
-				(x[5].innerHTML) == butterfly[5] && 
-				(x[6].innerHTML) == butterfly[6] &&
-				(x[7].innerHTML) == butterfly[7] && 
-				(x[8].innerHTML) == butterfly[8] && 
-				(x[9].innerHTML) == butterfly[9] && 
-				(x[10].innerHTML) == butterfly[10] && 
-				(x[11].innerHTML) == butterfly[11]){
-					
-					// if above conditions fullfill show this message
-					$(".butterfly .puzzle_result").html("puzzle Solved");
+		// Match Solved ButterFly with Result
+	    for(i = 0; i < x.length; i++) {
 			
-			} else if ((x[12].innerHTML) == babyRegalo[0] && 
-				(x[13].innerHTML) == babyRegalo[1] && 
-				(x[14].innerHTML) == babyRegalo[2] &&
-				(x[15].innerHTML) == babyRegalo[3] && 
-				(x[16].innerHTML) == babyRegalo[4] && 
-				(x[17].innerHTML) == babyRegalo[5] && 
-				(x[18].innerHTML) == babyRegalo[6] &&
-				(x[19].innerHTML) == babyRegalo[7] && 
-				(x[20].innerHTML) == babyRegalo[8] && 
-				(x[21].innerHTML) == babyRegalo[9] && 
-				(x[22].innerHTML) == babyRegalo[10] && 
-				(x[23].innerHTML) == babyRegalo[11]) {
-					
-					// if above conditions fullfill show this message
-					$(".babyRegalo .puzzle_result").html("puzzle Solved");	
-					
+			// If any of them don't match, solved will be set to false
+			if((x[i].innerHTML) != butterfly[i]) {
+				butterflySolved = false;
+		  	}
+		  	
+		  	// Solved or not solved?
+		  	if(butterflySolved == true) {		
+				$(".butterfly .puzzle_result").html("Puzzle Solved");
 			} else {
-				
-				// if both condition does not fullfill show this
-				$(".butterfly .puzzle_result").html("Solve the Butterfly Puzzle.");
-				$(".babyRegalo .puzzle_result").html("Solve the babyRegala Puzzle.");
-			
+				$(".butterfly .puzzle_result").html("Solve the Butterfly Puzzle!!!");
 			}
-		} 
-	}
-	
+		}
+		
+		// Match Solved Baby Ragelo with Result
+		for(i = 0; i < y.length; i++) {
+			
+			// If any of them don't match, solved will be set to false
+			if((y[i].innerHTML) != babyRegalo[i]) {
+				babyRegaloSolved = false;
+		  	}
+		  	
+		  	// Solved or not solved?
+		  	if(babyRegaloSolved == true) {		
+				$(".babyRegalo .puzzle_result").html("Puzzle Solved");
+			} else {
+				$(".babyRegalo .puzzle_result").html("Solve the babyRegala Puzzle.");
+			}
+		}
+	};
+
 // Menu Learn Tables: Page 3 Content
 	
 	//  call function calulate on keyup
@@ -335,4 +328,57 @@
 		}
 		
 	});
+	
+	// Delete it later
+	/*
+	// Match Users Sorted puzzle results to the final Result Array			
+	function showResult(){
+		
+		// Get Sorted puzzle pieces in Array form
+		var x = $(".sortable li").toArray();
+		
+		// Create a loop to Compare it with final Result
+		for (i=0; i<x.length; i++){
+			if ((x[0].innerHTML) == butterfly[0] && 
+				(x[1].innerHTML) == butterfly[1] && 
+				(x[2].innerHTML) == butterfly[2] &&
+				(x[3].innerHTML) == butterfly[3] && 
+				(x[4].innerHTML) == butterfly[4] && 
+				(x[5].innerHTML) == butterfly[5] && 
+				(x[6].innerHTML) == butterfly[6] &&
+				(x[7].innerHTML) == butterfly[7] && 
+				(x[8].innerHTML) == butterfly[8] && 
+				(x[9].innerHTML) == butterfly[9] && 
+				(x[10].innerHTML) == butterfly[10] && 
+				(x[11].innerHTML) == butterfly[11]){
+					
+					// if above conditions fullfill show this message
+					$(".butterfly .puzzle_result").html("puzzle Solved");
+			
+			} else if ((x[12].innerHTML) == babyRegalo[0] && 
+				(x[13].innerHTML) == babyRegalo[1] && 
+				(x[14].innerHTML) == babyRegalo[2] &&
+				(x[15].innerHTML) == babyRegalo[3] && 
+				(x[16].innerHTML) == babyRegalo[4] && 
+				(x[17].innerHTML) == babyRegalo[5] && 
+				(x[18].innerHTML) == babyRegalo[6] &&
+				(x[19].innerHTML) == babyRegalo[7] && 
+				(x[20].innerHTML) == babyRegalo[8] && 
+				(x[21].innerHTML) == babyRegalo[9] && 
+				(x[22].innerHTML) == babyRegalo[10] && 
+				(x[23].innerHTML) == babyRegalo[11]) {
+					
+					// if above conditions fullfill show this message
+					$(".babyRegalo .puzzle_result").html("puzzle Solved");	
+					
+			} else {
+				
+				// if both condition does not fullfill show this
+				$(".butterfly .puzzle_result").html("Solve the Butterfly Puzzle.");
+				$(".babyRegalo .puzzle_result").html("Solve the babyRegala Puzzle.");
+			
+			}
+		} 
+	}
+	*/
 	
