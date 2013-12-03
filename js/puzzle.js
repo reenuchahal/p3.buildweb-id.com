@@ -89,7 +89,8 @@
 				var start_pos = ui.item.data('start_pos');
 				var index = ui.placeholder.index();
 	
-	
+				
+				
 				if (start_pos < index) {
 					$('.sortable li:nth-child(' + index + ')').addClass('highlights');
 					$(" .movement").html("Moving forward, at position "+ index  );
@@ -149,8 +150,11 @@
 
 
 	// Match Sorted puzzle with the Result and Declare the Result.
+	// other than IE	
 	$('.sortable').mouseover(showResult);
 	
+	
+		
 	// Butterfly puzzle result 
 	var butterfly = Array(
 		'<img src="images/butterfly/Butterfly_open-(1)_01.png" alt="butterfly">',
