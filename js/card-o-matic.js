@@ -187,6 +187,9 @@
 		// print error the any of these conditions are true
 		if ((canvasVal == undefined) || (messageVal == "") ) {
 			
+			// Delete save error
+			$("#save_error").html(" ");
+			
 			// Print the following Error
 			$("#print_error").html("You can not print a blank card. <br/> You need to select an image, a message and a recepient.<br/> If you don't want to write a message. Please select No message option.")
 			
@@ -277,6 +280,9 @@
 			$("#saved-canvas").append(newColumn);
 		
 		} else {
+			
+			// clear error message first
+			$("#print_error").html("");
 			
 			// If saved copies are more than 3 show this error
 			$("#save_error").html("Max Saved Designs: 3")
