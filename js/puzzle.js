@@ -151,7 +151,7 @@
 
 	// Match Sorted puzzle with the Result and Declare the Result.
 	// other than IE	
-	$('.sortable').mouseover(showResult);
+	$('.sortable').hover(showResult);
 	
 	
 		
