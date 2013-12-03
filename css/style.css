@@ -64,7 +64,7 @@ General Classes : Alphabetical arrangement
 }
 	
 .navbar {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .navbar-brand{
@@ -85,7 +85,7 @@ Sortable Puzzle
 }
 
 .butterfly-parts, .babyRegalo-parts{
- 	background-color:#f6f6f6;
+	background-color:#f6f6f6;
 	width:401px;
 	padding:  0;
 	border: 1px solid #eee;
