@@ -162,12 +162,12 @@
 	$('#refresh-btn').click(function() {
 		
 		// Reset color and texture
-		$('#canvas').css('background-color', 'white');
-		$('#canvas').css('background-image', '');
+		$('#preview #canvas').css('background-color', 'white');
+		$('#preview #canvas').css('background-image', '');
 		
 		// Clear message and recipient divs
-		$('#message-output').html("");
-		$('#recipient-output').html("");
+		$('#preview #message-output').html("");
+		$('#preview #recipient-output').html("");
 			
 		// Remove any stickers
 		$('#preview .stickers_on_card').remove();
