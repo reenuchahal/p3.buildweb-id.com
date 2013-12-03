@@ -185,10 +185,18 @@
 		var recepientVal = $('#recipient-output').html();
 		
 		// print error the any of these conditions are true
-		if (canvasVal == undefined || messageVal == "" || recepientVal == "") {
+		if ((canvasVal == undefined) || (messageVal == "") ) {
 			
 			// Print the following Error
 			$("#print_error").html("You can not print a blank card. <br/> You need to select an image, a message and a recepient.<br/> If you don't want to write a message. Please select No message option.")
+			
+		} else if ((recepientVal == "") || ($.trim($("#recipient-output").html()) === "")) {
+			
+			// clear error message first
+			$("#print_error").html("");
+			
+			// Add another error message
+			$("#print_error").html("Recepient Name is Important. <br/>");
 			
 		} else {
 			
