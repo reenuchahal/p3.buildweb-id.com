@@ -209,9 +209,6 @@
 			
 		} else {
 			
-			// Delete save error
-			$("#save_error").html(" ");
-			
 			// clear error message first
 			$("#print_error").html("");
 		
