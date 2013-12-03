@@ -16,32 +16,34 @@
 	
 		var myMenu = $(this).attr("id");
 		
-		if (myMenu == 'puzzles-nav' || 'puzzles-display') {
+		// Hide everything except puzzles
+		if ((myMenu == 'puzzles-nav') || (myMenu == 'puzzles-display')) {
 			$("#dream-puzzles").removeClass("hideDiv").addClass("show");
 			$("#hero-unit, #learnTables, #makeCard").removeClass("show").addClass("hideDiv");
 			$("#puzzles-nav").addClass("active");
 			$("#home, #learnTab, #makeACard").removeClass("active");
-		} 
-	
-		if (myMenu == 'home') {
+		
+		// Hide everything except Multiplecation table
+		} else if ((myMenu == 'learnTab') || (myMenu == 'table-display')) {
+			$("#learnTables").removeClass("hideDiv").addClass("show");
+			$("#dream-puzzles, #hero-unit, #makeCard").removeClass("show").addClass("hideDiv");
+			$("#learnTab").addClass("active");
+			$("#puzzles-nav, #home, #makeACard").removeClass("active");	
+		
+		// Hide everything except card
+		} else if ((myMenu == 'makeACard') || (myMenu == 'mk-card')) {
+			$("#makeCard").removeClass("hideDiv").addClass("show");
+			$("#dream-puzzles, #hero-unit, #learnTables").removeClass("show").addClass("hideDiv");
+			$("#makeACard").addClass("active");
+			$("#puzzles-nav, #home, #learnTab").removeClass("active");	
+		
+		// Hide everything except home page
+		} else {
 			$("#hero-unit").removeClass("hideDiv").addClass("show");
 			$("#dream-puzzles, #learnTables, #makeCard").removeClass("show").addClass("hideDiv");
 			$("#home").addClass("active");
 			$("#puzzles-nav, #learnTab, #makeACard").removeClass("active");
 		} 
-		if (myMenu == 'learnTab') {
-			$("#learnTables").removeClass("hideDiv").addClass("show");
-			$("#dream-puzzles, #hero-unit, #makeCard").removeClass("show").addClass("hideDiv");
-			$("#learnTab").addClass("active");
-			$("#puzzles-nav, #home, #makeACard").removeClass("active");	
-		}
-		if (myMenu == 'makeACard') {
-			$("#makeCard").removeClass("hideDiv").addClass("show");
-			$("#dream-puzzles, #hero-unit, #learnTables").removeClass("show").addClass("hideDiv");
-			$("#makeACard").addClass("active");
-			$("#puzzles-nav, #home, #learnTab").removeClass("active");	
-		}
-	
 	});
 	
 	

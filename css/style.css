@@ -59,6 +59,10 @@ General Classes : Alphabetical arrangement
 	display: none !important;
 }
 
+.intro {
+	font-size:18px;
+}
+
 .jumbotron {
 	background-color:#ffffff;
 }
@@ -75,6 +79,9 @@ General Classes : Alphabetical arrangement
 	display:block !important;
 }
 
+.topMargin {
+	margin-top:30px;
+}
 
 /*-------------------------------------------------------------------------------------------------
 Sortable Puzzle
