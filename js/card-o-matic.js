@@ -170,7 +170,7 @@
 		$('#recipient-output').html("");
 			
 		// Remove any stickers
-		$('.stickers_on_card').remove();
+		$('#preview .stickers_on_card').remove();
 		
 		// clear error message
 		$("#print_error").html("");
