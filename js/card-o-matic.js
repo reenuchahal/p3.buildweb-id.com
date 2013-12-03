@@ -105,7 +105,6 @@
 			
 			// display nothing
 			$("#recipient-error").html("");
-			
 		}
 	});
 	

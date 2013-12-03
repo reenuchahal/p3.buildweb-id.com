@@ -121,7 +121,6 @@
 		$("#sort-butterfly").append(sortableElementsOne);
 		$("#sort-babyRegalo").append(sortableElementsTwo);
 		$(".movement").html(" ");
-		
 	});
 	
 
@@ -144,7 +143,6 @@
 			
 			// Change html to completed Puzzle
 			$("#puzzleResult").html("Completed Puzzle");
-			
 		}
 	});
 	
@@ -198,13 +196,13 @@
 	// Match Users Sorted puzzle results to the final Result Array
 	function showResult() {
 		
-	    // Get Sorted puzzle in Array form
-	    var x = $("#sort-butterfly li").toArray();
+		// Get Sorted puzzle in Array form
+		var x = $("#sort-butterfly li").toArray();
 		var y = $( "#sort-babyRegalo li").toArray();
-	    
-	    // Innocent until proven guilty
-	    var butterflySolved = true;
-	    var babyRegaloSolved = true;
+		
+		// Innocent until proven guilty
+		var butterflySolved = true;
+		var babyRegaloSolved = true;
 		
 		// Match Solved ButterFly with Result
 		for (i = 0; i < x.length; i++) {
@@ -285,7 +283,6 @@
 			
 			 //reset table html to empty
 			$("#multiplicationTable").html(" ");
-			
 		}
 	};
 	

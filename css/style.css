@@ -131,14 +131,14 @@ Sortable Puzzle
 	width: 450px;
 }
  
- .sortable li { 
- 	margin: 0; 
+.sortable li { 
+	margin: 0; 
 	padding: 0; 
 	float: left; 
 	width: 100px; 
 	text-align: center; 
 	cursor:move;
-	}
+}
 	
 
 /*-------------------------------------------------------------------------------------------------
