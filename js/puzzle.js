@@ -3,7 +3,6 @@
  */
 
 // Logo Animation
-
 	$("#logo").hover(function(){
 		$(this).filter(':not(:animated)').animate({ marginLeft:'15px'},'slow');
 	}, 
@@ -13,7 +12,6 @@
 	
 
 // Content display and Menu Functionality
-
 	$(".menu").click(function(){
 	
 		var myMenu = $(this).attr("id");
@@ -45,6 +43,7 @@
 		}
 	
 	});
+	
 	
 // Menu 2: Puzzles
 // Sortable Puzzle 
@@ -157,7 +156,6 @@
 	// Match Sorted puzzle with the Result and Declare the Result.
 	$('.sortable').mouseover(showResult);
 	
-	
 	// Butterfly puzzle result 
 	var butterfly = Array(
 		'<img src="images/butterfly/Butterfly_open-(1)_01.png" alt="butterfly">',
@@ -234,6 +232,7 @@
 		}
 	};
 
+
 // Menu Learn Tables: Page 3 Content
 	
 	//  call function calulate on keyup
@@ -282,6 +281,7 @@
 			
 		}
 	};
+	
 	
 	// reset Table
 	$("#resetTable").click(function(){
