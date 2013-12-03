@@ -87,12 +87,13 @@ Message Output
 /*-------------------------------------------------------------------------------------------------
 Recipient Output
 -------------------------------------------------------------------------------------------------*/
-.recipient_on_card {	
+#recipient-output {	
+	text-align:center;
 	font-size:30px;
+	width:100%;
 	position:absolute;
 	top:150px;
-	left:120px;
-	cursor: move !important;
+	cursor:move;
 }
 
 .error {
@@ -136,7 +137,7 @@ Stickers
 	cursor: default !important;
 }
 
-.saveCopy .stickers, .saveCopy #message-output, .saveCopy .recipient_on_card {
+.saveCopy .stickers, .saveCopy #message-output, .saveCopy #recipient-output {
 	cursor: default !important;
 } 
 

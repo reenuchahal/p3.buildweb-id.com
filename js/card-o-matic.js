@@ -11,7 +11,7 @@
 		var fontFamily = $(this).val();
 		
 		// Set font Family for Canvas Elements
-		$('#message-output, #recipient-output').css("font-family", fontFamily);
+		$('#card-background #message-output, #card-background #recipient-output').css("font-family", fontFamily);
 	
 	});
 
@@ -83,46 +83,16 @@
 		// Get the Value types in input
 		var recipient = $(this).val();
 		
-		$("#recipient-output").html("<p></p>");
-		$("#recipient-output p").addClass("recipient_on_card");
+		$("#recipient-output").html(recipient);
 		
-		// Display it on canvas in recipient output
-		$(".recipient_on_card").html(recipient);
 		
 		// Make the Recepient name draggable
-		$(".recipient_on_card").draggable({
+		$("#recipient-output").draggable({
 			containment: '#canvas', 
 			opacity:.35, 
 			cursor: "move", 
 			cursorAt: { top: 56, left: 56 },
 		});
-		
-		// Make the Recepient name droppable
-		// to make it more efficient in different order of deletion allow to drop sticker too.
-		$( "#droppable" ).droppable({
-				accept: ".stickers_on_card, .recipient_on_card",
-				activeClass: "ui-state-hover",
-				hoverClass: "ui-state-active",
-				drop: function( event, ui ) {
-					
-					// add this delete icon
-					$(this).html('<br/><br/><span class="glyphicon glyphicon-trash" title="Drag here to delete."></span><p></p>');
-					
-					// add tool tip
-					$(this).find(".glyphicon-trash").tooltip();
-					
-					// Find 'p' element, display Image Dropped, Fade it slowly
-					$( this )
-						.find( "p" )
-							.html("Dropped!")
-								.fadeOut( "slow" );
-					
-					// Delete Image	
-					$('body').css('cursor','default');		
-					$( ui.draggable ).remove();	
-				}
-		});
-		
 		
 		// check the length of the types name
 		var length = recipient.length;
@@ -166,13 +136,13 @@
 			// drop individual image on canvas
 			// to Make Recepient delete more efficient in different order of deletion with stickers
 			$( "#droppable" ).droppable({
-				accept: ".stickers_on_card, .recipient_on_card",
+				accept: ".stickers_on_card",
 				activeClass: "ui-state-hover",
 				hoverClass: "ui-state-active",
 				drop: function( event, ui ) {
 					
 					// add this delete icon
-					$(this).html('<br/><br/><span class="glyphicon glyphicon-trash" title="Drag here to delete."></span><p></p>');
+					$(this).html('<br/><br/><span class="glyphicon glyphicon-trash" title="Drag the sticker here to delete."></span><p></p>');
 					
 					// add tool tip
 					$(this).find(".glyphicon-trash").tooltip();
@@ -180,7 +150,7 @@
 					// Find 'p' element, display Image Dropped, Fade it slowly
 					$( this )
 						.find( "p" )
-							.html("Dropped!")
+							.html("Sticker dropped!")
 								.fadeOut( "slow" );
 					
 					// Delete Image			
