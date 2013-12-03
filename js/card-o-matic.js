@@ -191,8 +191,6 @@
 	});
 
 
-
-
 // Refresh The card
 	$('#refresh-btn').click(function() {
 		
