@@ -278,7 +278,7 @@
 		} else {
 			
 			// Show the following error.
-			$("#table_error").html("<ul>Enter a valid number. <li>No special characters or String</li><li>No negative Number.</li><li>No empty spaces.</li></ul>");
+			$("#table_error").html("<ul>Enter a valid number. <li>No special characters or String</li><li>No empty spaces.</li></ul>");
 			
 			 //reset table html to empty
 			$("#multiplicationTable").html(" ");
