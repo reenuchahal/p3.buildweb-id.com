@@ -195,6 +195,9 @@
 			
 		} else if ((recepientVal == "") || ($.trim($("#recipient-output").html()) === "")) {
 			
+			// Delete save error
+			$("#save_error").html(" ");
+			
 			// clear error message first
 			$("#print_error").html("");
 			
