@@ -174,6 +174,9 @@
 		
 		// clear error message
 		$("#print_error").html("");
+		
+		// Delete save error
+		$("#save_error").html(" ");
 	});
 
 
@@ -205,6 +208,9 @@
 			$("#print_error").html("Recepient Name is Important. <br/>");
 			
 		} else {
+			
+			// Delete save error
+			$("#save_error").html(" ");
 			
 			// clear error message first
 			$("#print_error").html("");
