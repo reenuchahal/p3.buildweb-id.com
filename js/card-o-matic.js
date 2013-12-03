@@ -246,6 +246,9 @@
 	
 	$( "#save-btn-card" ).click(function() {
 		
+		// clear error message first
+		$("#print_error").html("");
+		
 		// show the button
 		$("#clear-copy").removeClass("hidden").addClass("show");
 		
@@ -280,9 +283,6 @@
 			$("#saved-canvas").append(newColumn);
 		
 		} else {
-			
-			// clear error message first
-			$("#print_error").html("");
 			
 			// If saved copies are more than 3 show this error
 			$("#save_error").html("Max Saved Designs: 3")
