@@ -7,7 +7,7 @@
 	$("#logo").hover(function(){
 		$(this).filter(':not(:animated)').animate({ marginLeft:'15px'},'slow');
 	}, 
-	function() {
+	function(){
 		$(this).animate({ marginLeft:'0px'},'slow');
 	});
 	
