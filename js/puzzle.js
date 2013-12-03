@@ -85,6 +85,7 @@
 				ui.item.data('start_pos', start_pos);
 			},
 			change: function(event, ui) {
+				
 				var start_pos = ui.item.data('start_pos');
 				var index = ui.placeholder.index();
 	
@@ -181,7 +182,7 @@
 		'<img src="images/babyRegalo/babyRegalo_11.png" alt="babyRegalo">',
 		'<img src="images/babyRegalo/babyRegalo_12.png" alt="babyRegalo">'
 	);
-	
+
 	// Match Users Sorted puzzle results to the final Result Array
 	function showResult(){
 		
@@ -205,7 +206,7 @@
 		  	if(butterflySolved == true) {		
 				$(".butterfly .puzzle_result").html("Puzzle Solved");
 			} else {
-				$(".butterfly .puzzle_result").html("Solve the Butterfly Puzzle!!!");
+				$(".butterfly .puzzle_result").html("Solve the Butterfly Puzzle.");
 			}
 		}
 		

@@ -83,17 +83,47 @@
 		// Get the Value types in input
 		var recipient = $(this).val();
 		
+		$("#recipient-output").html("<p></p>");
+		$("#recipient-output p").addClass("recipient_on_card");
+		
 		// Display it on canvas in recipient output
-		$("#recipient-output").html(recipient);
+		$(".recipient_on_card").html(recipient);
 		
 		// Make the Recepient name draggable
-		$("#recipient-output").draggable({
+		$(".recipient_on_card").draggable({
 			containment: '#canvas', 
 			opacity:.35, 
 			cursor: "move", 
 			cursorAt: { top: 56, left: 56 },
 		});
-	
+		
+		// Make the Recepient name droppable
+		// to make it more efficient in different order of deletion allow to drop sticker too.
+		$( "#droppable" ).droppable({
+				accept: ".stickers_on_card, .recipient_on_card",
+				activeClass: "ui-state-hover",
+				hoverClass: "ui-state-active",
+				drop: function( event, ui ) {
+					
+					// add this delete icon
+					$(this).html('<br/><br/><span class="glyphicon glyphicon-trash" title="Drag here to delete."></span><p></p>');
+					
+					// add tool tip
+					$(this).find(".glyphicon-trash").tooltip();
+					
+					// Find 'p' element, display Image Dropped, Fade it slowly
+					$( this )
+						.find( "p" )
+							.html("Dropped!")
+								.fadeOut( "slow" );
+					
+					// Delete Image	
+					$('body').css('cursor','default');		
+					$( ui.draggable ).remove();	
+				}
+			});
+		
+		
 		// check the length of the types name
 		var length = recipient.length;
 		
@@ -110,7 +140,7 @@
 			
 		}
 	});
-
+	
 
 // Make Sticker Draggable. Create Delete optio  to delete individual images on canvas
 	$('.stickers').draggable(
@@ -118,10 +148,7 @@
 		{ revertDuration: 0 }, 
 		{stop: function( event, ui ) {
 	
-			//var canvasX = $('#canvas').offset().left;
-			//var canvasY = $('#canvas').offset().top;
-			//var canvasW = $('#canvas').width();
-			//var canvasH = $('#canvas').height();
+			// Clone what I dragged
 			var mySticker = $(this).clone();
 	        
 			// Set mySticker position and cursor
@@ -137,14 +164,15 @@
 			mySticker.draggable({containment: '#canvas'});
 	
 			// drop individual image on canvas
+			// to Make Recepient delete more efficient in different order of deletion with stickers
 			$( "#droppable" ).droppable({
-				accept: ".stickers_on_card",
+				accept: ".stickers_on_card, .recipient_on_card",
 				activeClass: "ui-state-hover",
 				hoverClass: "ui-state-active",
 				drop: function( event, ui ) {
 					
 					// add this delete icon
-					$(this).html('<br/><br/><span class="glyphicon glyphicon-trash" title="Drag image here to delete."></span><p></p>');
+					$(this).html('<br/><br/><span class="glyphicon glyphicon-trash" title="Drag here to delete."></span><p></p>');
 					
 					// add tool tip
 					$(this).find(".glyphicon-trash").tooltip();
@@ -152,7 +180,7 @@
 					// Find 'p' element, display Image Dropped, Fade it slowly
 					$( this )
 						.find( "p" )
-							.html( "Image Dropped!" )
+							.html("Dropped!")
 								.fadeOut( "slow" );
 					
 					// Delete Image			
@@ -253,11 +281,11 @@
 		// hide the clear copy button
 		$(this).removeClass("show").addClass("hidden");
 	});
-	
+
 	
 	// Function to save cards at the bottom
 	var count = 0;
-	$( "body" ).on( "click", "#save-btn-card", function() {
+	$( "#save-btn-card" ).click(function() {
 		
 		// show the button
 		$("#clear-copy").removeClass("hidden").addClass("show");

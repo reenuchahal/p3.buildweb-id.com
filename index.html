@@ -204,6 +204,10 @@
 			<div class="row">
 				<div class="col-sm-5 col-md-6">
 					
+					<!-- Card Instructions
+					============================================================== -->
+					<button class="btn btn-primary myToolTip" data-toggle="modal" data-target="#myModalCard" title="click to check extra features other than class example" data-placement="right">Card's Features</button><br/>
+					
 					<!-- Sticker picker 
 					============================================================== -->
 					<h2 class="myToolTip" title="Drag a sticker to add on canvas. You can further drag the sticker anywhere on the canvas. To drop the sticker drag it to the bin at the bottom of the canvas.">Drag a sticker to add on canvas</h2>
@@ -235,7 +239,7 @@
 							
 					<!-- Recipient 
 					============================================================== -->	
-					<h2 class="myToolTip" title="You can drag a name anywhere on the canvas.">Write name of the recipient</h2>
+					<h2 class="myToolTip" title="You can drag a name anywhere on the canvas. To delete the name, drag it to the bin or delete in the input">Write name of the recipient</h2>
 					<input type='text' id='recipient' maxlength="14"> 
 					<span class='error' id='recipient-error'></span>
 					
@@ -257,7 +261,7 @@
 					
 					<!-- Color picker
 					============================================================== -->
-					<h2>Pick a color</h2>
+					<h2>Pick a  color</h2>
 					<div class="colors" id="red"></div>
 					<div class="colors" id="blue"></div>
 					<div class="colors" id="green"></div>
@@ -283,7 +287,7 @@
 							<div id='canvas'>
 								<div id='message-output'></div>
 								<div id='recipient-output'></div>
-								<div id="droppable"><br/><br/><span class="glyphicon glyphicon-trash myToolTip" title="Drag image here to delete."></span></div>
+								<div id="droppable"><br/><br/><span class="glyphicon glyphicon-trash myToolTip" title="Drag here to delete."></span></div>
 							</div> <!-- #canvas-->
 						</div> <!-- / #card-background -->
 						
@@ -291,7 +295,7 @@
 						======================== -->
 						<button class="btn btn-warning" id='refresh-btn'>Start over</button>
 						<button class="btn btn-warning"  id='print-btn-card' >Print</button>
-						<button class="btn btn-warning myToolTip"  id='save-btn-card' title='Save different versions of card ' data-placement='bottom' >Save a copy</button><br/><br/>
+						<button class="btn btn-warning myToolTip"  id='save-btn-card' title='Save different versions of card at the bottom.' data-placement='bottom' >Save a copy</button><br/><br/>
 						
 						<!-- Print Error
 						======================== -->
@@ -332,7 +336,7 @@
 	<!-- ======================================================================================================
 	Dreamalings Model
 	=========================================================================================================== -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -350,18 +354,46 @@
 	<!-- ======================================================================================================
 	Puzzle Instructions Model
 	=========================================================================================================== -->
-	<div class="modal fade" id="myModalPuzzle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="myModalPuzzle" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Puzzles Instruction.</h4>
+					<h4 class="modal-title">Puzzles Instruction</h4>
 				</div>
 				<div class="modal-body">
 					You can solve the puzzle by dragging the puzzle pieces in correct order. 
 					To see a finished version of the puzzle click on the completed puzzle button.
 					To set the puzzle to it's original order click on the reset button.
 					Choose another puzzle option using left hand side 'Select puzzle here.'
+				</div>
+				<div class="modal-footer">
+					
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	
+	<!-- ======================================================================================================
+	Card's Extra Features Model
+	=========================================================================================================== -->
+	<div class="modal fade" id="myModalCard" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Card's Extra Features M</h4>
+				</div>
+				<div class="modal-body">
+					<ul>
+						<li>Stickers are draggable to canvas and on canvas.</li>
+						<li>There is a bin on canvas to delete stickers and recipient name. Drag sticker / recipient name to the bin to delete.</li>
+						<li>You can change the font of message and recepient name on canvas.</li>
+						<li>You can save 3 different copies of card at the bottom. <strong>Restiction:</strong> More than 3 copies are not allowed</li>
+						<li>Empty card are not allowed to print. You need to have atleast one sticker, a message and recepient name.</li>
+						<li>Use of tool tip to guide.</li>
+					</ul>
 				</div>
 				<div class="modal-footer">
 					

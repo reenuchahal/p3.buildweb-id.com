@@ -5,6 +5,7 @@ body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background:#ffffff url('../images/dreamalings/body_bg.jpg') repeat;
+	cursor:default;
 }
 
 hr {
