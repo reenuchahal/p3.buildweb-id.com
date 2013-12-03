@@ -3,39 +3,39 @@
  */
 
 // Logo Animation
-	$("#logo").hover(function(){
+	$("#logo").hover(function() {
 		$(this).filter(':not(:animated)').animate({ marginLeft:'15px'},'slow');
 	}, 
-	function(){
+	function() {
 		$(this).animate({ marginLeft:'0px'},'slow');
 	});
 	
 
 // Content display and Menu Functionality
-	$(".menu").click(function(){
+	$(".menu").click(function() {
 	
 		var myMenu = $(this).attr("id");
 		
-		if (myMenu == 'puzzles-nav' || 'puzzles-display'){
+		if (myMenu == 'puzzles-nav' || 'puzzles-display') {
 			$("#dream-puzzles").removeClass("hideDiv").addClass("show");
 			$("#hero-unit, #learnTables, #makeCard").removeClass("show").addClass("hideDiv");
 			$("#puzzles-nav").addClass("active");
 			$("#home, #learnTab, #makeACard").removeClass("active");
 		} 
 	
-		if (myMenu == 'home'){
+		if (myMenu == 'home') {
 			$("#hero-unit").removeClass("hideDiv").addClass("show");
 			$("#dream-puzzles, #learnTables, #makeCard").removeClass("show").addClass("hideDiv");
 			$("#home").addClass("active");
 			$("#puzzles-nav, #learnTab, #makeACard").removeClass("active");
 		} 
-		if (myMenu == 'learnTab'){
+		if (myMenu == 'learnTab') {
 			$("#learnTables").removeClass("hideDiv").addClass("show");
 			$("#dream-puzzles, #hero-unit, #makeCard").removeClass("show").addClass("hideDiv");
 			$("#learnTab").addClass("active");
 			$("#puzzles-nav, #home, #makeACard").removeClass("active");	
 		}
-		if (myMenu == 'makeACard'){
+		if (myMenu == 'makeACard') {
 			$("#makeCard").removeClass("hideDiv").addClass("show");
 			$("#dream-puzzles, #hero-unit, #learnTables").removeClass("show").addClass("hideDiv");
 			$("#makeACard").addClass("active");
@@ -51,17 +51,17 @@
 	// Select the Puzzle
 	$('select').change(puzzleSwitch);
 	
-	function puzzleSwitch(){
+	function puzzleSwitch() {
 		var selectPuzzle = $("#selectPuzzle").val();
 		
-		if (selectPuzzle == "p-butterfly"){
+		if (selectPuzzle == "p-butterfly") {
 			$(".final_result").removeClass("show");
 			$("#puzzleResult").html("Completed Puzzle");
 			$(".butterfly").css("display","block");
 			$(".babyRegalo").css("display","none");
 			$("#dream-puzzles h2").html("Butterfly")
 			$(".movement").html(" ");
-		} else if (selectPuzzle == "p-babyRegalo"){
+		} else if (selectPuzzle == "p-babyRegalo") {
 			$(".final_result").removeClass("show");
 			$("#puzzleResult").html("Completed Puzzle");
 			$(".babyRegalo").css("display","block");
@@ -73,7 +73,7 @@
 	
 	
 	// Sort the Puzzle
-	$(function(){
+	$(function() {
 		$('.sortable').sortable({
 			start: function(event, ui) {
 				var start_pos = ui.item.index();
@@ -111,15 +111,17 @@
 	var sortableElementsTwo = $("#sort-babyRegalo li");
 	
 	// Reset the Sortable Puzzle
-	$("#reset").click(function(){
+	$("#reset").click(function() {
+		
 		$("#sort-butterfly").append(sortableElementsOne);
 		$("#sort-babyRegalo").append(sortableElementsTwo);
 		$(".movement").html(" ");
+		
 	});
 	
 
 	// Toggle Completed puzzle 
-	$("#puzzleResult").click(function(){
+	$("#puzzleResult").click(function() {
 		
 		// Toggle show class
 		$(".final_result").toggleClass("show");
@@ -128,7 +130,7 @@
 		var buttonVal = $(this).html();
 		
 		// Match the button value and Change it
-		if (buttonVal == "Completed Puzzle"){
+		if (buttonVal == "Completed Puzzle") {
 			
 			//change html to close
 			$("#puzzleResult").html("Close")
@@ -143,7 +145,7 @@
 	
 
 	// close the Completed Puzzle by clicking 'X' button on puzzle
-	$(".close").click(function(){
+	$(".close").click(function() {
 		
 		// remove class show
 		$(".final_result").removeClass("show");
@@ -189,7 +191,7 @@
 	);
 
 	// Match Users Sorted puzzle results to the final Result Array
-	function showResult(){
+	function showResult() {
 		
 	    // Get Sorted puzzle in Array form
 	    var x = $("#sort-butterfly li").toArray();
@@ -200,15 +202,15 @@
 	    var babyRegaloSolved = true;
 		
 		// Match Solved ButterFly with Result
-		for (i = 0; i < x.length; i++){
+		for (i = 0; i < x.length; i++) {
 		
 			// If any of them don't match, solved will be set to false
-			if((x[i].innerHTML) != butterfly[i]){
+			if((x[i].innerHTML) != butterfly[i]) {
 				butterflySolved = false;
 			}
 		
 			// Solved or not solved?
-			if(butterflySolved == true){		
+			if(butterflySolved == true) {		
 				$(".butterfly .puzzle_result").html("Puzzle Solved");
 			} else {
 				$(".butterfly .puzzle_result").html("Solve the Butterfly Puzzle.");
@@ -216,15 +218,15 @@
 		}
 		
 		// Match Solved Baby Ragelo with Result
-		for (i = 0; i < y.length; i++){
+		for (i = 0; i < y.length; i++) {
 		
 			// If any of them don't match, solved will be set to false
-			if((y[i].innerHTML) != babyRegalo[i]){
+			if((y[i].innerHTML) != babyRegalo[i]) {
 				babyRegaloSolved = false;
 			}
 		
 			// Solved or not solved?
-			if(babyRegaloSolved == true){		
+			if(babyRegaloSolved == true) {		
 				$(".babyRegalo .puzzle_result").html("Puzzle Solved");
 			} else {
 				$(".babyRegalo .puzzle_result").html("Solve the babyRegala Puzzle.");
@@ -284,7 +286,7 @@
 	
 	
 	// reset Table
-	$("#resetTable").click(function(){
+	$("#resetTable").click(function() {
 		
 		// reset column to empty
 		$("#column").val(" ");
@@ -303,7 +305,7 @@
 		// get the input value in variable
 		var y = $("#column").val();
 		
-		if($.isNumeric(y)){
+		if($.isNumeric(y)) {
 			
 			// Take the existing card on the page (in the #canvas div) and clone it for the new tab
 			var table_clone = $('#multiplicationTable').clone();

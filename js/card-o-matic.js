@@ -214,6 +214,7 @@
 
 // Print Card in new Tab
 	$('#print-btn-card').click(function() {
+		
 		var canvasVal = $('#canvas img').attr("src");
 		var messageVal = $('#message-output').html();
 		var recepientVal = $('#recipient-output').html();
@@ -221,6 +222,7 @@
 		// print error the any of these conditions are true
 		if (canvasVal == undefined || messageVal == "" || recepientVal == "") {
 			
+			// Print the following Error
 			$("#print_error").html("You can not print a blank card. <br/> You need to select an image, a message and a recepient.<br/> If you don't want to write a message. Please select No message option.")
 			
 		} else {
@@ -263,26 +265,6 @@
 	
 // Save Different Versions
 
-	// Function to clear saved cards
-	$('#clear-copy').click(function() {
-		
-		// set count to zero
-		count = 0;
-		
-		// delete right margin
-		$(".saveCopy").css("margin", "0 0 0 0");
-		
-		// delete .saveCopy div
-		$(".saveCopy").html(" ");
-		
-		// delete an save_error
-		$("#save_error").html(" ");
-		
-		// hide the clear copy button
-		$(this).removeClass("show").addClass("hidden");
-	});
-
-	
 	// Function to save cards at the bottom
 	var count = 0;
 	$( "#save-btn-card" ).click(function() {
@@ -326,6 +308,26 @@
 			$("#save_error").html("Max Saved Designs: 3")
 		}
 		
+	});
+	
+	
+	// Function to clear saved cards
+	$('#clear-copy').click(function() {
+		
+		// set count to zero
+		count = 0;
+		
+		// delete right margin
+		$(".saveCopy").css("margin", "0 0 0 0");
+		
+		// delete .saveCopy div
+		$(".saveCopy").html(" ");
+		
+		// delete an save_error
+		$("#save_error").html(" ");
+		
+		// hide the clear copy button
+		$(this).removeClass("show").addClass("hidden");
 	});
 	
 	
