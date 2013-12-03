@@ -12,7 +12,6 @@
 		
 		// Set font Family for Canvas Elements
 		$('#card-background #message-output, #card-background #recipient-output').css("font-family", fontFamily);
-	
 	});
 
 
@@ -39,7 +38,6 @@
 		
 		// Set texture to canvas
 		$("#canvas").css("background-image", myTexture);
-		
 	});
 
 
