@@ -121,7 +121,7 @@
 					$('body').css('cursor','default');		
 					$( ui.draggable ).remove();	
 				}
-			});
+		});
 		
 		
 		// check the length of the types name
@@ -189,7 +189,6 @@
 			});
 		}
 	});
-
 
 // Refresh The card
 	$('#refresh-btn').click(function() {
@@ -265,6 +264,7 @@
 
 	// Function to save cards at the bottom
 	var count = 0;
+	
 	$( "#save-btn-card" ).click(function() {
 		
 		// show the button
@@ -305,7 +305,6 @@
 			// If saved copies are more than 3 show this error
 			$("#save_error").html("Max Saved Designs: 3")
 		}
-		
 	});
 	
 	

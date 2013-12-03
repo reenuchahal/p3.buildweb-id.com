@@ -133,7 +133,13 @@ Stickers
 -------------------------------------------------------------------------------------------------*/
 .saveCopy {
 	margin: 10px 10px 40px 0;
+	cursor: default !important;
 }
+
+.saveCopy .stickers, .saveCopy #message-output, .saveCopy .recipient_on_card {
+	cursor: default !important;
+} 
+
 .saveCopy .glyphicon-trash{
 	display:none !important;
 }

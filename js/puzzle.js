@@ -56,6 +56,7 @@
 	function puzzleSwitch() {
 		var selectPuzzle = $("#selectPuzzle").val();
 		
+		// select butterfly puzzle
 		if (selectPuzzle == "p-butterfly") {
 			$(".final_result").removeClass("show");
 			$("#puzzleResult").html("Completed Puzzle");
@@ -63,6 +64,8 @@
 			$(".babyRegalo").css("display","none");
 			$("#dream-puzzles h2").html("Butterfly")
 			$(".movement").html(" ");
+		
+		// select baby regalo puzzle	
 		} else if (selectPuzzle == "p-babyRegalo") {
 			$(".final_result").removeClass("show");
 			$("#puzzleResult").html("Completed Puzzle");

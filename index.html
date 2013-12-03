@@ -76,13 +76,13 @@
 					</p>
 				</div>
 				<div class="col-md-4 col-xs-12 topMargin">
-					<p>Kids can practice the times tables while having fun on dreamalings. Teacher can also use this app in class room environment.</p>
+					<p>Kids can practice the times tables while having fun on dreamalings. Teachers can also use this app in class room environment.</p>
 					<p>
 					  <a id="table-display" class="menu btn btn-lg btn-warning" href="#">Learn Tables &raquo;</a>
 					</p>
 				</div>
 				<div class="col-md-4 col-xs-12 topMargin">
-					<p>Kids can have fun by making dreamalings cards and print them for family, teachers and friends. It will increase your kid's creativity , self-confidence and imagination.</p>
+					<p>Kids can have fun by making dreamalings cards and print them for family, teachers and friends. It will increase your kid's creativity, self-confidence and imagination.</p>
 					<p>
 					  <a id="mk-card" class="menu btn btn-lg btn-warning" href="#">Make a Card &raquo;</a>
 					</p>
@@ -407,7 +407,11 @@
 						<li>Stickers are draggable to canvas and on canvas.</li>
 						<li>There is a bin on canvas to delete stickers and recipient name. Drag sticker / recipient name to the bin to delete.</li>
 						<li>You can change the font of message and recepient name on canvas.</li>
-						<li>You can save 3 different copies of card at the bottom. <strong>Restiction:</strong> More than 3 copies are not allowed</li>
+						<li>You can save 3 different copies of card at the bottom. 
+							<br/><strong>Restiction:</strong> More than 3 copies are not allowed.
+							I need to make improvement for this part and make it more functional for example any of 3 versions can be selected for printing. 
+							I may try this as part of final project.
+						</li>
 						<li>Empty card are not allowed to print. You need to have atleast one sticker, a message and recepient name.</li>
 						<li>Use of tool tip to guide.</li>
 					</ul>
@@ -443,6 +447,40 @@
 						<li>Two .css files 1) style.css (puzzles and learn table) 2) features.css (cards)</li>
 						<li>One .html file : index.html</li>
 					</ul>
+					<h4>Key Parts of Project</h4>
+						<ul>
+							<li>Menu: Handling single page layout. Showing and hiding divs according to menu. 
+								Highlight the active page on menu. 
+							</li>
+							<li>Sortable Puzzle</li>
+							<li>You can sort puzzle and see the movement of Sorting at the bottom. 
+								Result of the puzzle will be displayed once user will complete the puzzle.
+							</li>
+							<li>You can see finished version of puzzles. 
+								User can close the finished version either clicking on close button or on 'X' of completed puzzle image.
+								There is option to reset the puzzle.
+							</li>
+							<li>Learn times Tables. 
+								Only numbers are allowed, you can not print empty table. 
+								It will throw an error. There is an option to reset the table.
+							</li>
+							<li>Stickers are draggable in cards section.</li>
+							<li>User can delete stickers and receient name on canvas by dragging it to the bin (at the bottom of canvas)</li>
+							<li>User can change the font of canvas text.</li>
+							<li>This card is full of options, if you want to go back to any point. You don't need to click 'start over' button forcefully.</li>
+							<li>User is resticted by errors. You can not print empty canvas.</li>
+							<li>You can not save more than 3 cards.</li>
+						</ul>
+					<h4>Needs improvement</h4>
+						<ul>
+							<li>Mouseover function used for showing results of sortable puzzle pieces does not work in IE. 
+								Except this everything working fine in IE. I tried hover that  was also not working in IE. 
+								I will try to fix it as part of final project.
+							</li>
+							<li>In Card's section, saving different versions of cards (for reference or fun for kids) need further improvements. 
+								I may consider this as part of final project. 
+							</li>
+						</ul>
 				</div>
 				<div class="modal-footer">
 					
