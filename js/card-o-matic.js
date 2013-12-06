@@ -29,7 +29,6 @@
 	});
 
 
-
 // Change texture of the card
 	$(".textures").click(function() {
 		
