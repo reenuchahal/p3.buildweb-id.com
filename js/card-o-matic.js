@@ -157,6 +157,7 @@
 		}
 	});
 
+
 // Refresh The card
 	$('#refresh-btn').click(function() {
 		
@@ -177,6 +178,7 @@
 		// Delete save error
 		$("#save_error").html(" ");
 	});
+	
 	
 // Function myCanvas for print and save card
 	function myCanvas() {
@@ -201,7 +203,6 @@
 		
 		return new_tab_contents;
 	}
-
 
 
 // Print Card in new Tab
