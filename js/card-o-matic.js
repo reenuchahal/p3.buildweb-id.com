@@ -177,6 +177,31 @@
 		// Delete save error
 		$("#save_error").html(" ");
 	});
+	
+// Function myCanvas for print and save card
+	function myCanvas() {
+		
+		// Take the existing card on the page (in the #canvas div) and clone it for the new tab
+		var canvas_clone = $('#canvas').clone();
+		
+		// Give us the whole canvas, i.e the complete card from our clone
+		var canvas = canvas_clone.prop('outerHTML');
+		
+		// For the new tab, we need to basically construct all the pieces we need for any HTML page starting with a start <html> tag.
+		var new_tab_contents = '<html>';
+		
+		// Adding onto our new_tab_contents variable one line at a time)
+		new_tab_contents += '<head>';
+		new_tab_contents += '<link rel="stylesheet" href="css/main.css" type="text/css">'; // Add CSS
+		new_tab_contents += '<link rel="stylesheet" href="css/features.css" type="text/css">'; // Add CSS
+		new_tab_contents += '</head>';
+		new_tab_contents += '<body>';
+		new_tab_contents += canvas; // Here's where we add the card to our HTML for the new tab
+		new_tab_contents += '</body></html>';
+		
+		return new_tab_contents;
+	}
+
 
 
 // Print Card in new Tab
@@ -210,24 +235,9 @@
 			
 			// clear error message first
 			$("#print_error").html("");
-		
-			// Take the existing card on the page (in the #canvas div) and clone it for the new tab
-			var canvas_clone = $('#canvas').clone();
 			
-			// Give us the whole canvas, i.e the complete card from our clone
-			var canvas = canvas_clone.prop('outerHTML');
-			
-			// For the new tab, we need to basically construct all the pieces we need for any HTML page starting with a start <html> tag.
-			var new_tab_contents = '<html>';
-			
-			// Adding onto our new_tab_contents variable one line at a time)
-			new_tab_contents += '<head>';
-			new_tab_contents += '<link rel="stylesheet" href="css/main.css" type="text/css">'; // Add CSS
-			new_tab_contents += '<link rel="stylesheet" href="css/features.css" type="text/css">'; // Add CSS
-			new_tab_contents += '</head>';
-			new_tab_contents += '<body>';
-			new_tab_contents += canvas; // Here's where we add the card to our HTML for the new tab
-			new_tab_contents += '</body></html>';
+			// call function myCanvas
+			var new_tab_contents = myCanvas();
 			
 			// To create a new tab
 			var new_tab = window.open();
@@ -257,24 +267,8 @@
 		// show the button
 		$("#clear-copy").removeClass("hidden").addClass("show");
 		
-		// Take the existing card on the page (in the #canvas div) and clone it for the new tab
-		var canvas_clone = $('#canvas').clone();
-			
-		// Give us the whole canvas, i.e the complete card from our clone
-		var canvas = canvas_clone.prop('outerHTML');
-		
-		// For the new tab, we need to basically construct all the pieces we need for any HTML page starting with a start <html> tag.
-		var new_tab_contents = '<html>';
-		
-		// Adding onto our new_tab_contents variable one line at a time)
-		new_tab_contents += '<head>';
-		new_tab_contents += '<link rel="stylesheet" href="css/main.css" type="text/css">'; // Add CSS
-		new_tab_contents += '<link rel="stylesheet" href="css/features.css" type="text/css">'; // Add CSS
-		new_tab_contents += '</head>';
-		new_tab_contents += '<body>';
-		new_tab_contents += canvas; // Here's where we add the card to our HTML for the new tab
-		new_tab_contents += '</body></html>';
-			
+		// call function myCanvas
+		var new_tab_contents = myCanvas();
 		
 		var newColumn=" ";
 		
